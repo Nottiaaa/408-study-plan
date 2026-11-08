@@ -11,6 +11,11 @@
       "d-04": "review",
       "d-05": "active"
     },
-    "topic": {}
+    "topic": {
+      "ds-6-11": "done",
+      "ds-6-10": "done",
+      "ds-5-3": "done",
+      "ds-5-4": "review"
+    }
   }
 }
