@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-08",
+  "state": {
+    "task": {
+      "d-done1": "done",
+      "d-done2": "done"
+    },
+    "topic": {}
+  }
+}
