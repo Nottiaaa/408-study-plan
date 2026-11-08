@@ -4,7 +4,8 @@
   "state": {
     "task": {
       "d-done1": "done",
-      "d-done2": "done"
+      "d-done2": "done",
+      "d-01": "done"
     },
     "topic": {}
   }
