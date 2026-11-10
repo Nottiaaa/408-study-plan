@@ -10,15 +10,21 @@
       "d-03": "done",
       "d-04": "done",
       "d-05": "done",
-      "d-07": "review"
+      "d-07": "review",
+      "d-08": "active"
     },
     "topic": {
       "ds-6-11": "done",
       "ds-6-10": "done",
       "ds-5-3": "done",
       "ds-5-4": "review",
-      "ds-4-4": "review",
-      "ds-4-6": "review"
+      "ds-4-4": "done",
+      "ds-4-6": "review",
+      "ds-4-1": "review",
+      "ds-4-5": "done",
+      "ds-4-7": "review",
+      "ds-4-8": "review",
+      "ds-4-9": "done"
     }
   }
 }
