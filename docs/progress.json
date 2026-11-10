@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08",
+  "updated_at": "2026-11-10",
   "state": {
     "task": {
       "d-done1": "done",
@@ -8,14 +8,17 @@
       "d-01": "done",
       "d-02": "done",
       "d-03": "done",
-      "d-04": "review",
-      "d-05": "done"
+      "d-04": "done",
+      "d-05": "done",
+      "d-07": "review"
     },
     "topic": {
       "ds-6-11": "done",
       "ds-6-10": "done",
       "ds-5-3": "done",
-      "ds-5-4": "review"
+      "ds-5-4": "review",
+      "ds-4-4": "review",
+      "ds-4-6": "review"
     }
   }
 }
