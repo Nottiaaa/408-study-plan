@@ -137,7 +137,7 @@ footer{font-size:11px;color:#8b988e;line-height:1.7;margin-top:25px}
    if(!direct.length&&!leaves.length)return "";
    const id=[active,c.name,s.name].join("::"),score=tally(s.qids),expanded=!!searchTerm||openSec.has(id);
    return `<details class="section" data-sec="${escape(id)}" ${expanded?"open":""}>
-     <summary class="section-head"><span class="tier">二级</span><strong>${escape(s.name)}</strong>
+     <summary class="section-head"><strong>${escape(s.name)}</strong>
        <span class="sub-progress">${score.done}/${score.total}</span><span class="points">${s.loss}分</span><span class="arrow">⌄</span>
      </summary><div class="section-content">
        ${direct.length?`<div class="direct-list">${direct.map(qView).join("")}</div>`:""}
