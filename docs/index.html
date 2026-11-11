@@ -57,6 +57,36 @@ h1{font-size:29px;letter-spacing:-.035em;margin:5px 0 5px}h1 span{font-weight:50
 .status-select.done{border-color:#bcdfc6;color:#27804d;background:#e2f3e6}.status-select.review{color:#a36531;background:#fff9f0}.status-select.active{color:var(--blue);background:var(--blue-bg)}
 .sync-info{color:#6d8073;font-size:11px;margin:9px 0 13px}.footer{margin-top:26px;color:#97a29a;font-size:11px;line-height:1.6}.empty{padding:42px 10px;text-align:center;color:#88978c;border:1px dashed var(--line);border-radius:9px;background:#fff}
 @media(max-width:740px){.shell{padding:18px 12px 55px}.top{align-items:flex-start;flex-direction:column}.buttons{width:100%}.tabs{margin-top:15px}.tab{padding:10px 15px}.headline{align-items:flex-start;flex-direction:column;gap:10px}.score{text-align:left}.toolbar{align-items:start}.controls{flex-direction:column;align-items:stretch}.mode-group{justify-content:space-between}.mode{flex:1}.chapter-summary{padding:14px 11px;gap:8px}.chapter-number{display:none}.chapter-copy>strong{font-size:14px}.chapter-right{gap:6px}.chapter-loss{font-size:16px}.chapter-state{font-size:10px;min-width:83px;padding:4px}.chapter-body{padding:9px}.topic-summary{padding:11px 8px;gap:6px}.topic-loss{font-size:12px}.status-chip{font-size:10px;min-width:0;padding:4px 5px}.topic-indicator{display:none}.question-row{padding:10px 6px;gap:7px}.question-check{flex-basis:17px;width:17px;height:17px}.question-detail{font-size:10px}.status-select{min-width:73px}.score strong{font-size:24px}}
+
+/* Flat hierarchy: remove nested left rails and stepped card indentation. */
+.chapter.incomplete{border-left:1px solid #dce5de}
+.chapter.complete{border-left:1px solid #d4e7d8}
+.chapter-summary{background:#fff}
+.chapter.complete>.chapter-summary{background:#f3f9f4}
+.chapter-body{padding:0}
+.topic,.topic.is-done,.topic.is-open{border:0;border-radius:0;margin:0;box-shadow:none}
+.topic{background:#fff}
+.topic+.topic{border-top:1px solid #e5ebe6}
+.topic.is-done{background:#f3f9f4}
+.topic-summary{padding:14px 20px;gap:12px}
+.topic[open]>.topic-summary{border-bottom:1px solid #ebefeb}
+.topic.is-done>.topic-summary{background:#f2f8f3}
+.topic.is-open>.topic-summary{background:#fff}
+.questions{padding:0}
+.question-row{margin:0;border-radius:0;padding:12px 20px;gap:12px;border-bottom:1px solid #ecf0ec}
+.question-row:last-child{border-bottom:0}
+.question-row:not(.done){background:#fffaf5;border-left:0}
+.question-row.done{background:#edf7ef;border-left:0}
+.question-row .question-check{flex:0 0 23px;width:23px;height:23px}
+.question-row.done .question-detail{color:#869b8d}
+.chapter-number{color:#88988e}
+@media(max-width:740px){
+ .chapter-body{padding:0}
+ .topic-summary{padding:12px 12px;gap:7px}
+ .questions{padding:0}
+ .question-row{padding:11px 12px;gap:7px}
+ .question-row .question-check{flex:0 0 20px;width:20px;height:20px}
+}
 </style></head><body>
 <div class="shell">
 <header class="top"><div class="brand"><div class="brand-mark">408</div><div><strong>历史错题专项</strong><small>只复习错题和对应知识点</small></div></div><div class="buttons"><button class="btn" id="refresh">读取云端</button><button class="btn" id="copy">复制同步提示词</button></div></header>
