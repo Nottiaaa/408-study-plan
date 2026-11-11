@@ -134,8 +134,7 @@ footer{font-size:11px;color:#8b988e;line-height:1.7;margin-top:25px}
  function sectionView(c,s,i){
    const direct=s.direct.filter(isShown);
    const leaves=s.entries.map((e,j)=>leafView(s,c,e,j)).filter(Boolean);
-   const titleMatch=s.name.toLowerCase().includes(searchTerm)||c.name.toLowerCase().includes(searchTerm);
-   if(!direct.length&&!leaves.length&&!titleMatch)return "";
+   if(!direct.length&&!leaves.length)return "";
    const id=[active,c.name,s.name].join("::"),score=tally(s.qids),expanded=!!searchTerm||openSec.has(id);
    return `<details class="section" data-sec="${escape(id)}" ${expanded?"open":""}>
      <summary class="section-head"><span class="tier">二级</span><strong>${escape(s.name)}</strong>
