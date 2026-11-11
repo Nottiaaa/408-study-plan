@@ -12,22 +12,7 @@
       "d-05": "done",
       "d-07": "review",
       "d-08": "active",
-      "d-done3": "done",
-      "d-done4": "done",
-      "d-done5": "done",
-      "d-done6": "done",
-      "d-done7": "done",
-      "d-09": "active",
-      "d-done8": "done",
-      "d-review1": "done",
-      "d-done9": "done",
-      "d-done10": "done",
-      "d-done11": "done",
-      "d-review2": "done",
-      "d-review3": "done",
-      "d-review4": "done",
-      "d-review5": "done",
-      "d-review6": "done"
+      "d-09": "active"
     },
     "topic": {
       "ds-6-11": "done",
@@ -35,19 +20,19 @@
       "ds-5-3": "done",
       "ds-5-4": "review",
       "ds-4-4": "done",
-      "ds-4-6": "review",
+      "ds-4-6": "done",
       "ds-4-1": "review",
       "ds-4-5": "done",
-      "ds-4-7": "review",
-      "ds-4-8": "review",
+      "ds-4-7": "done",
+      "ds-4-8": "done",
       "ds-4-9": "done",
       "ds-0-1": "review",
       "ds-1-2": "review",
-      "ds-2-4": "review",
+      "ds-2-4": "done",
       "ds-2-5": "review",
       "ds-3-10": "done",
       "ds-3-0": "review",
-      "ds-3-8": "review"
+      "ds-3-8": "done"
     }
   }
 }
