@@ -17,7 +17,12 @@
       "d-done5": "done",
       "d-done6": "done",
       "d-done7": "done",
-      "d-09": "active"
+      "d-09": "active",
+      "d-done8": "done",
+      "d-review1": "review",
+      "d-done9": "done",
+      "d-done10": "done",
+      "d-done11": "done"
     },
     "topic": {
       "ds-6-11": "done",
@@ -34,7 +39,9 @@
       "ds-0-1": "review",
       "ds-1-2": "review",
       "ds-2-4": "review",
-      "ds-2-5": "review"
+      "ds-2-5": "review",
+      "ds-3-10": "done",
+      "ds-3-0": "review"
     }
   }
 }
