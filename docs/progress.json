@@ -54,7 +54,7 @@
       "co-2016-T21": "pending",
       "co-2016-T45": "pending",
       "co-2017-T14": "pending",
-      "co-2017-T18": "pending",
+      "co-2017-T18": "done",
       "co-2017-T20": "pending",
       "co-2017-T43": "pending",
       "co-2017-T44": "pending",
@@ -110,7 +110,11 @@
       "os-2024-T32": "pending",
       "os-2024-T46": "pending",
       "os-2025-T45": "pending",
-      "os-2025-T46": "pending"
+      "os-2025-T46": "pending",
+      "co-2016-T12": "done",
+      "co-2018-T16": "done",
+      "co-2020-T17": "done",
+      "co-2025-T21": "done"
     },
     "topic": {
       "ds-k000": "done",
