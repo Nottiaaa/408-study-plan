@@ -22,7 +22,12 @@
       "d-review1": "review",
       "d-done9": "done",
       "d-done10": "done",
-      "d-done11": "done"
+      "d-done11": "done",
+      "d-review2": "review",
+      "d-review3": "review",
+      "d-review4": "review",
+      "d-review5": "review",
+      "d-review6": "review"
     },
     "topic": {
       "ds-6-11": "done",
@@ -41,7 +46,8 @@
       "ds-2-4": "review",
       "ds-2-5": "review",
       "ds-3-10": "done",
-      "ds-3-0": "review"
+      "ds-3-0": "review",
+      "ds-3-8": "review"
     }
   }
 }
