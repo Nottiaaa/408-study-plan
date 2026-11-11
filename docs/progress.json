@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-10",
+  "updated_at": "2026-11-11",
   "state": {
     "task": {
       "d-done1": "done",
@@ -11,7 +11,13 @@
       "d-04": "done",
       "d-05": "done",
       "d-07": "review",
-      "d-08": "active"
+      "d-08": "active",
+      "d-done3": "done",
+      "d-done4": "done",
+      "d-done5": "done",
+      "d-done6": "done",
+      "d-done7": "done",
+      "d-09": "active"
     },
     "topic": {
       "ds-6-11": "done",
@@ -24,7 +30,11 @@
       "ds-4-5": "done",
       "ds-4-7": "review",
       "ds-4-8": "review",
-      "ds-4-9": "done"
+      "ds-4-9": "done",
+      "ds-0-1": "review",
+      "ds-1-2": "review",
+      "ds-2-4": "review",
+      "ds-2-5": "review"
     }
   }
 }
