@@ -3,16 +3,13 @@
   "updated_at": "2026-11-11",
   "state": {
     "task": {
-      "d-done1": "done",
-      "d-done2": "done",
-      "d-01": "done",
-      "d-02": "done",
-      "d-03": "done",
-      "d-04": "done",
-      "d-05": "done",
-      "d-07": "review",
-      "d-08": "active",
-      "d-09": "active"
+      "d-ch-0": "active",
+      "d-ch-1": "active",
+      "d-ch-2": "active",
+      "d-ch-3": "active",
+      "d-ch-4": "review",
+      "d-ch-5": "active",
+      "d-ch-6": "active"
     },
     "topic": {
       "ds-6-11": "done",
