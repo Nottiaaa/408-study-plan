@@ -148,31 +148,30 @@ h1{font-size:29px;letter-spacing:-.035em;margin:5px 0 5px}h1 span{font-weight:50
  const chapterOpen=new Set(),topicOpen=new Set();
  try{const x=JSON.parse(localStorage.getItem(KEY)||"null");if(x?.question)state=x;}catch(e){}
  try{const x=JSON.parse(localStorage.getItem(PENDING)||"null");if(x?.question)delta=x;}catch(e){}
+ // Preserve completed questions while migrating previous intermediate statuses.
+ for(const obj of [state.question,delta.question]){
+  for(const [id,value] of Object.entries(obj||{}))obj[id]=value==="done"?"done":"pending";
+ }
+ try{localStorage.setItem(KEY,JSON.stringify(state));localStorage.setItem(PENDING,JSON.stringify(delta));}catch(e){}
  const $=id=>document.getElementById(id);
  const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  const sCurrent=()=>D.subjects.find(s=>s.id===selected);
- const getStatus=id=>delta.question[id]||state.question?.[id]||"pending";
- const label={done:"已完成",review:"待巩固",active:"进行中",pending:"待复习"};
+ const getStatus=id=>(delta.question[id]||state.question?.[id])==="done"?"done":"pending";
+ const label={done:"已完成",pending:"未完成"};
  function uniqueQ(groups){return [...new Map(groups.flatMap(g=>g.questions.map(q=>[q.id,q]))).values()];}
  function count(gs){const qs=uniqueQ(gs);const done=qs.filter(q=>getStatus(q.id)==="done").length;return {total:qs.length,done,todo:qs.length-done};}
  function getGs(s,c){return c.groups.map(id=>s.groups.find(g=>g.id===id)).filter(Boolean).sort((a,b)=>b.loss-a.loss||a.name.localeCompare(b.name,"zh"));}
- function statusHTML(st){return `<span class="status-chip ${st}">${st==="done"?"✓ ":st==="review"?"↻ ":st==="active"?"● ":"○ "}${label[st]||"待复习"}</span>`;}
- function topicStatus(g){
-  let q=g.questions.map(x=>getStatus(x.id));
-  if(q.every(x=>x==="done"))return "done";
-  if(q.some(x=>x==="active"))return "active";
-  if(q.some(x=>x==="review"))return "review";
-  return "pending";
- }
+ function statusHTML(st){return `<span class="status-chip ${st}">${st==="done"?"✓ ":"○ "}${label[st]}</span>`;}
+ function topicStatus(g){return g.questions.every(q=>getStatus(q.id)==="done")?"done":"pending";}
  function selectHTML(q){
   const st=getStatus(q.id),info=q.details.map(n=>`${esc(n.node)} -${n.loss}分`).join(" / ");
   return `<div class="question-row ${st}">
-    <div class="question-check" aria-hidden="true">${st==="done"?"✓":st==="review"?"↻":st==="active"?"●":"○"}</div>
+    <div class="question-check" aria-hidden="true">${st==="done"?"✓":"○"}</div>
     <div class="question-info"><div class="question-title">${q.year} ${esc(q.number)} <span class="question-type">${esc(q.type)}</span></div>
       <div class="question-detail">本考点历史扣 ${q.loss} 分${info?` · ${info}`:""}</div>
     </div>
     <select class="status-select ${st}" data-question="${esc(q.id)}" aria-label="${q.year} ${esc(q.number)} 复习状态">
-      ${["pending","active","review","done"].map(v=>`<option value="${v}" ${v===st?"selected":""}>${label[v]}</option>`).join("")}
+      ${["pending","done"].map(v=>`<option value="${v}" ${v===st?"selected":""}>${label[v]}</option>`).join("")}
     </select>
   </div>`;
  }
@@ -186,7 +185,7 @@ h1{font-size:29px;letter-spacing:-.035em;margin:5px 0 5px}h1 span{font-weight:50
   const all=count([g]),st=topicStatus(g),isOpen=searchActive||topicOpen.has(g.id);
   return `<details class="topic ${st==="done"?"is-done":"is-open"}" data-topic="${esc(g.id)}" ${isOpen?"open":""}>
     <summary class="topic-summary">
-      <span class="topic-indicator">${st==="done"?"✓":st==="review"?"↻":st==="active"?"●":"○"}</span>
+      <span class="topic-indicator">${st==="done"?"✓":"○"}</span>
       <span class="topic-copy"><strong>${esc(g.name)}</strong><span class="topic-meta">${all.done}/${all.total} 题完成 · 历史错题 ${all.total} 道</span></span>
       <span class="topic-loss">${g.loss} 分</span>
       ${statusHTML(st)}<span class="chevron">⌄</span>
@@ -252,6 +251,7 @@ h1{font-size:29px;letter-spacing:-.035em;margin:5px 0 5px}h1 span{font-weight:50
     const j=await r.json();
     if(!j.state?.question)throw Error("进度文件格式不符");
     state=j.state;
+    for(const [id,value] of Object.entries(state.question||{}))state.question[id]=value==="done"?"done":"pending";
     for(const [id,v]of Object.entries(delta.question))if(state.question[id]===v)delete delta.question[id];
     try{localStorage.setItem(KEY,JSON.stringify(state));localStorage.setItem(PENDING,JSON.stringify(delta));}catch(e){}
     cloudOk=true;render();
