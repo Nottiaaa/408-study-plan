@@ -50,7 +50,7 @@
       "ds-2024-T6": "done",
       "co-2015-T15": "done",
       "co-2015-T16": "done",
-      "co-2015-T43": "pending",
+      "co-2015-T43": "done",
       "co-2016-T21": "done",
       "co-2016-T45": "pending",
       "co-2017-T14": "done",
@@ -62,7 +62,7 @@
       "co-2018-T21": "done",
       "co-2018-T44": "pending",
       "co-2019-T19": "done",
-      "co-2019-T46": "pending",
+      "co-2019-T46": "done",
       "co-2020-T43": "pending",
       "co-2020-T44": "pending",
       "co-2022-T15": "done",
@@ -72,7 +72,7 @@
       "co-2023-T18": "done",
       "co-2023-T19": "done",
       "co-2023-T20": "done",
-      "co-2023-T43": "pending",
+      "co-2023-T43": "done",
       "co-2023-T44": "pending",
       "co-2024-T16": "done",
       "co-2024-T44": "pending",
@@ -132,7 +132,8 @@
       "co-2015-T21": "done",
       "co-2023-T21": "pending",
       "os-2017-T24": "done",
-      "os-2018-T29": "done"
+      "os-2018-T29": "done",
+      "co-2015-T44": "done"
     },
     "topic": {
       "ds-k000": "done",
