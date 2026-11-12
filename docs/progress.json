@@ -64,7 +64,7 @@
       "co-2019-T19": "done",
       "co-2019-T46": "done",
       "co-2020-T43": "pending",
-      "co-2020-T44": "pending",
+      "co-2020-T44": "done",
       "co-2022-T15": "done",
       "co-2022-T43": "pending",
       "co-2023-T14": "done",
@@ -78,7 +78,7 @@
       "co-2024-T44": "pending",
       "co-2025-T19": "done",
       "co-2025-T20": "done",
-      "co-2025-T43": "pending",
+      "co-2025-T43": "done",
       "co-2025-T44": "pending",
       "os-2015-T45": "pending",
       "os-2017-T29": "pending",
@@ -133,7 +133,8 @@
       "co-2023-T21": "pending",
       "os-2017-T24": "done",
       "os-2018-T29": "done",
-      "co-2015-T44": "done"
+      "co-2015-T44": "done",
+      "co-2024-T43": "pending"
     },
     "topic": {
       "ds-k000": "done",
