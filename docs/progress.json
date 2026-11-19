@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated_at": "2026-11-12",
+  "updated_at": "2026-11-19",
   "state": {
     "question": {
       "ds-2015-T1": "done",
@@ -174,11 +174,11 @@
       "ds-k033": "done",
       "ds-k034": "pending",
       "co-k000": "pending",
-      "co-k001": "pending",
-      "co-k002": "pending",
+      "co-k001": "done",
+      "co-k002": "done",
       "co-k003": "pending",
-      "co-k004": "pending",
-      "co-k005": "pending",
+      "co-k004": "review",
+      "co-k005": "review",
       "co-k006": "pending",
       "co-k007": "pending",
       "co-k008": "pending",
@@ -190,15 +190,15 @@
       "co-k014": "pending",
       "co-k015": "pending",
       "co-k016": "pending",
-      "co-k017": "pending",
-      "co-k018": "pending",
-      "co-k019": "pending",
-      "co-k020": "pending",
-      "co-k021": "pending",
-      "co-k022": "pending",
-      "co-k023": "pending",
-      "co-k024": "pending",
-      "co-k025": "pending",
+      "co-k017": "done",
+      "co-k018": "done",
+      "co-k019": "done",
+      "co-k020": "done",
+      "co-k021": "done",
+      "co-k022": "done",
+      "co-k023": "review",
+      "co-k024": "review",
+      "co-k025": "review",
       "co-k026": "pending",
       "os-k000": "pending",
       "os-k001": "pending",
@@ -825,5 +825,39 @@
         "focus": ""
       }
     ]
+  },
+  "study_notes": {
+    "co_2026_11_19": {
+      "summary": "CO 指令系统与控制器专题01—13已完成学习及核心机制验收；专题14跨考纲查漏进行中。完成专题不等于相关全部历史错题整题重刷完成。",
+      "completed_modules": [
+        "01 指令格式与扩展操作码",
+        "02 指令寻址与PC相对寻址",
+        "03 操作数寻址",
+        "04 基址/变址/复合/栈",
+        "05 位宽与寻址边界",
+        "06 字节序/对齐/结构体",
+        "07 常用算术逻辑指令（细节待查漏）",
+        "08 CMP条件转移/CALL/RET（标志组合待查漏）",
+        "09 分支循环及数组指针的机器级表示",
+        "10 栈帧/参数传递/寄存器保护",
+        "11 编译/汇编/链接/装入与重定位",
+        "12 CISC/RISC与Load/Store",
+        "13 硬布线/微程序控制/数据通路/时序"
+      ],
+      "in_progress": "14 综合查漏：流水线结构冒险、控制冒险、性能、超标量及并行处理、异常中断分类、历史错题",
+      "verified_practice": [
+        "2009 CO T44 单总线数据通路逐拍控制信号，C5-C10正确；理解C5-C9并行优化",
+        "2014 CO T18 公共取指2条+32×4=130条微指令，下地址8位",
+        "2023 CO T19：I1→I2转发、I2→I3 Load-Use冒险、I3→I4控制冒险，选择C"
+      ],
+      "weak_points": [
+        "字段直接编码互斥组空操作的m+1已纠错，避免重复简单计算",
+        "条件转移标志CF/ZF/SF/OF的有符号与无符号逻辑稳定性待查",
+        "算术指令位宽与标志边界保留查漏",
+        "流水线结构冒险/超标量/动态流水线及多处理器尚未系统验收",
+        "历史待完成题仍需按整题独立作答后才更新state.question"
+      ],
+      "record_policy": "只更新已验收的topic及本次学习说明；未变更任何原有question完成状态、HTML或其他科目进度。"
+    }
   }
 }
